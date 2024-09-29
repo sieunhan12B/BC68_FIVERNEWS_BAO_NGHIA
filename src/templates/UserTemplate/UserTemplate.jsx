@@ -6,6 +6,9 @@ import FindTheRight from "../../components/FindTheRight/FindTheRight";
 import Popular from "../../components/Popular/Popular";
 import AWhole from "../../components/AWhole/AWhole";
 import FiverrPro from "../../components/FiverrPro/FiverrPro";
+import AboutFiver from "../../components/AboutFiver/AboutFiver";
+import FiverrLogo from "../../components/FiverrLogo/FiverrLogo";
+import MadeOnFiverr from "../../components/MadeOnFiverr/MadeOnFiverr";
 
 const UserTemplate = () => {
   // header , content , footer
@@ -16,6 +19,9 @@ const UserTemplate = () => {
       <Popular />
       <AWhole />
       <FiverrPro />
+      <AboutFiver />
+      <FiverrLogo />
+      <MadeOnFiverr />
       <main>
         <Outlet />
       </main>
