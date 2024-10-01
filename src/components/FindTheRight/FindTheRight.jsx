@@ -4,7 +4,7 @@ import React from "react";
 //
 const FindTheRight = () => {
   return (
-    <div className=" container mx-16 relative bg-no-repeat bg-[url('/public/bg_1.png')] text-white h-screen flex flex-col justify-center items-center">
+    <div className=" container mx-24 relative bg-no-repeat bg-[url('/public/bg_1.png')] text-white h-screen flex flex-col justify-center items-center">
       {/* Hero Headline */}
       <div className=" mb-10 text-center">
         <h1 className="text-4xl md:text-5xl font-bold">
