@@ -48,7 +48,7 @@ const MadeOnFiverr = () => {
           <img src="../../../public/M_4.jpeg" alt="" />
         </div>
         <div className="frist">
-          <img src="../../../public/M_4.1.jpeg" alt="" />
+          <img src="../../../public/M_4.1.j  peg" alt="" />
         </div>
         <div className="frist">
           <img src="../../../public/M_4.2.jpg" alt="" />

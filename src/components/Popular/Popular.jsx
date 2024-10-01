@@ -6,14 +6,14 @@ const Popular = () => {
     <div className="container ">
       <h2 className="text-6xl my-8">Popular services</h2>
 
-      <div className="flex h-60 w-50 carousel-wrapper gap-8 ">
+      <div className="flex h-60 w-50 carousel-wrapper gap-4 ">
         {/* P_1 */}
         <div className=" bg-green-600 rounded-lg">
           <h3 className="text-white text-sm font-bold my-5">
             Website Development
           </h3>
           <div className="rounded-lg">
-            <img src="../../../public/p_1.png" alt="" />
+            <img src="./p_1.png" alt="" />
           </div>
         </div>
 
@@ -21,7 +21,7 @@ const Popular = () => {
         <div className=" bg-orange-500 rounded-lg">
           <h3 className="text-white text-sm font-bold my-5">Logo Design</h3>
           <div className="rounded-lg">
-            <img src="../../../public/p_2.png" alt="" />
+            <img src="./p_2.png" alt="" />
           </div>
         </div>
 
@@ -29,7 +29,7 @@ const Popular = () => {
         <div className=" bg-green-900 rounded-lg">
           <h3 className="text-white text-sm font-bold my-5">SEO</h3>
           <div className="rounded-lg">
-            <img src="../../../public/p_3.png" alt="" />
+            <img src="./p_3.png" alt="" />
           </div>
         </div>
 
@@ -39,7 +39,7 @@ const Popular = () => {
             Architecture & Interior Design
           </h3>
           <div className=" rounded-lg">
-            <img src="../../../public/p_4.png" alt="" />
+            <img src="./p_4.png" alt="" />
           </div>
         </div>
 
@@ -49,7 +49,7 @@ const Popular = () => {
             Social Media Marketing
           </h3>
           <div className="rounded-lg">
-            <img src="../../../public/p_5.png" alt="" />
+            <img src="./p_5.png" alt="" />
           </div>
         </div>
 
@@ -57,7 +57,7 @@ const Popular = () => {
         <div className=" bg-amber-800 rounded-lg">
           <h3 className="text-white text-sm font-bold my-5">Voice Over</h3>
           <div className="rounded-lg">
-            <img src="../../../public/p_6.png" alt="" />
+            <img src="./p_6.png" alt="" />
           </div>
         </div>
 
@@ -67,7 +67,7 @@ const Popular = () => {
             Software Development
           </h3>
           <div className="rounded-lg">
-            <img src="../../../public/p_7.png" alt="" />
+            <img src="./p_7.png" alt="" />
           </div>
         </div>
 
@@ -77,7 +77,7 @@ const Popular = () => {
             Date Science & ML
           </h3>
           <div className="rounded-lg">
-            <img src="../../../public/p_8.png" alt="" />
+            <img src="./p_8.png" alt="" />
           </div>
         </div>
 
@@ -87,7 +87,7 @@ const Popular = () => {
             Product Photography
           </h3>
           <div className="rounded-lg">
-            <img src="../../../public/p_9.png" alt="" />
+            <img src="./p_9.png" alt="" />
           </div>
         </div>
 
@@ -97,7 +97,7 @@ const Popular = () => {
             E-Commerce Marketing
           </h3>
           <div className="rounded-lg">
-            <img src="../../../public/p_10.png" alt="" />
+            <img src="./p_10.png" alt="" />
           </div>
         </div>
 
@@ -105,7 +105,7 @@ const Popular = () => {
         <div className=" bg-pink-500 rounded-lg">
           <h3 className="text-white text-sm font-bold my-5">Video Editing</h3>
           <div className="rounded-lg">
-            <img src="../../../public/p_11.png" alt="" />
+            <img src="./p_11.png" alt="" />
           </div>
         </div>
       </div>

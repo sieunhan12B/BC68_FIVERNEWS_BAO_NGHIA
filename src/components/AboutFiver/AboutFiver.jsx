@@ -5,27 +5,25 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const AboutFiver = () => {
   return (
-    <Carousel>
-      <div className="container mt-6">
-        <h2 className="text-2xl font-semibold">
-          What they're saying about Fiverr
-        </h2>
-        <div className=" mt-4 flex flex-row">
-          <div className="left">
-            <img src={video} alt="" />
-            <img src="../../../public/about.fiver.jpg" alt="" />
-          </div>
-          <div className="right mx-20">
-            <h3>Caitlin Tormey, Chief Commercial Officer Company | NAADAM</h3>
-            <h4 className="mt-4">
-              "We've used Fiverr for Shopify web development, graphic design,
-              and backend web development. Working with Fiverr makes my job a
-              little easier every day."
-            </h4>
-          </div>
+    <div className="container mt-6">
+      <h2 className="text-2xl font-semibold">
+        What they're saying about Fiverr
+      </h2>
+      <div className=" mt-4 flex flex-row">
+        <div className="left">
+          <img src={video} alt="" />
+          <img src="./about.fiver.jpg" alt="" />
+        </div>
+        <div className="right mx-20">
+          <h3>Caitlin Tormey, Chief Commercial Officer Company | NAADAM</h3>
+          <h4 className="mt-4">
+            "We've used Fiverr for Shopify web development, graphic design, and
+            backend web development. Working with Fiverr makes my job a little
+            easier every day."
+          </h4>
         </div>
       </div>
-    </Carousel>
+    </div>
   );
 };
 

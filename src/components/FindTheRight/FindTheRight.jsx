@@ -4,7 +4,7 @@ import React from "react";
 //
 const FindTheRight = () => {
   return (
-    <div className=" container mx-24 relative bg-no-repeat bg-[url('/public/bg_1.png')] text-white h-screen flex flex-col justify-center items-center">
+    <div className=" container mx-16 relative bg-no-repeat bg-[url('/public/bg_1.png')] text-white h-screen flex flex-col justify-center items-center">
       {/* Hero Headline */}
       <div className=" mb-10 text-center">
         <h1 className="text-4xl md:text-5xl font-bold">
@@ -56,7 +56,7 @@ const FindTheRight = () => {
       {/* Trusted by Brands */}
 
       {/* Categories Section */}
-      <div className=" flex flex-row  max-w-6xl sm:grid-cols-4 gap-4">
+      <div className=" flex flex-row max-w-7xl  gap-2">
         {[
           "Programming & Tech",
           "Graphics & Design",

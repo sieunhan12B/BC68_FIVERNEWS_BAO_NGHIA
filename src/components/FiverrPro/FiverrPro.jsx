@@ -33,7 +33,7 @@ const FiverrPro = () => {
           </h4>
         </div>
         <div className="mt-40">
-          <img src="../../../public/X1.png" alt="" />
+          <img src="./X1.png" alt="" />
         </div>
       </div>
     </div>
