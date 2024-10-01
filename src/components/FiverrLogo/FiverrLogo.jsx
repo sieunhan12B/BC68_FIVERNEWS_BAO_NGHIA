@@ -14,7 +14,7 @@ const FiverrLogo = () => {
           </button>
         </div>
         <div className="right mx-60">
-          <img src="../../../public/logo-maker-lohp.png " alt="" />
+          <img src="./logo-maker-lohp.png " alt="" />
         </div>
       </div>
     </div>

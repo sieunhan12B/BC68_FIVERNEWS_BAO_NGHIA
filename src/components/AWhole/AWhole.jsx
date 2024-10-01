@@ -10,7 +10,7 @@ const aWhole = () => {
       <div className=" mx-2 grid grid-cols-4">
         {/* 1 */}
         <div>
-          <img src="../../../public/4_1.svg" alt="" />
+          <img src="./4_1.svg" alt="" />
           <h3 className="mt-4 text-xl">Over 700 categories</h3>
           <h4 className="mt-8">
             Get results from skilled freelancers from all over the world, for
@@ -20,7 +20,7 @@ const aWhole = () => {
 
         {/* 2 */}
         <div>
-          <img src="../../../public/4_2.svg" alt="" />
+          <img src="./4_2.svg" alt="" />
           <h3 className="mt-4 text-xl">Clear, transparent pricing</h3>
           <h4 className="mt-8">
             Pay per project or by the hour (Pro). Payments only get released
@@ -29,7 +29,7 @@ const aWhole = () => {
         </div>
         {/* 3 */}
         <div>
-          <img src="../../../public/4_3.svg" alt="" />
+          <img src="./4_3.svg" alt="" />
           <h3 className="mt-4 text-xl">Quality work done faster</h3>
           <h4 className="mt-8">
             Filter to find the right freelancers quickly and get great work
@@ -39,7 +39,7 @@ const aWhole = () => {
 
         {/* 4 */}
         <div>
-          <img src="../../../public/4_4.svg" alt="" />
+          <img src="./4_4.svg" alt="" />
           <h3 className="mt-4 text-xl">24/7 award-winning support</h3>
           <h4 className="mt-8">
             Chat with our team to get your questions answered or resolve any
