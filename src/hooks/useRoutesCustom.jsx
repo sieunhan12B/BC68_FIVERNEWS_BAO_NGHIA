@@ -29,7 +29,7 @@ const useRoutesCustom = () => {
           element: <ListJobPage />,
         },
         {
-          path: pathDefault.listJob,
+          path: "./",
           element: <Home />,
         },
       ],
