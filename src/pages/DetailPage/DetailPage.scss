@@ -1,0 +1,21 @@
+.ant-collapse-header {
+  border-bottom: 1px solid black;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.562) !important;
+  svg {
+    rotate: 90deg;
+  }
+}
+.ant-space-item {
+  font-weight: bold;
+}
+
+.ant-collapse-item-active > .ant-collapse-header .anticon {
+  transform: rotate(90deg);
+}
+.detail-content-right {
+  button.active {
+    background-color: white;
+    border-bottom: 2px solid black;
+  }
+}
