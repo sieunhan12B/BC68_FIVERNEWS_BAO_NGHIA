@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import vnImg from "./../../assets/img/vn.png";
+
 import { pathDefault } from "../../common/path";
 import IconHome from "../../components/Icon/IconHome";
 import { congViecService } from "../../services/congViec.service";
@@ -305,7 +307,78 @@ const DetailPage = () => {
                         {/* comment  */}
                         <div className="reviewer_comment ">
                           {comment.map((item, index) => {
-                            return <CommentDetail item={item} />;
+                            console.log(item);
+                            return (
+                              <div className="space-y-5 my-12">
+                                <div className="border rounded-xl p-5 space-y-4 ">
+                                  <div className="reviewer_content_top">
+                                    <div className="flex space-x-4 ">
+                                      <img
+                                        className="w-16 h-16 rounded-full"
+                                        src={item.avatar}
+                                        alt=""
+                                      />
+                                      <div className="">
+                                        <h4>{item.tenNguoiBinhLuan}</h4>
+                                        <div className="country flex space-x-2">
+                                          <img
+                                            className="w-6 h-6"
+                                            src={vnImg}
+                                            alt=""
+                                          />
+                                          <span>VietNam</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div className="review_content_middle bg-gray-200  h-[1px]"></div>
+                                  <div className="reviewer_content_bot text-center space-y-2">
+                                    <div className="danh-gia-top  flex space-x-1 items-center  ">
+                                      <div className="sao flex">
+                                        <p>
+                                          {" "}
+                                          {[
+                                            ...Array(
+                                              item.saoBinhLuan > 5
+                                                ? (item.saoBinhLuan = 5)
+                                                : item.saoBinhLuan
+                                            ),
+                                          ].map((_, i) => (
+                                            <span>★</span>
+                                          ))}
+                                        </p>
+                                        {/* <i className="fa-solid fa-star text-black mt-1 "></i> */}
+                                      </div>
+                                      <div className="ngan-cach rounded-full h-1 w-1 bg-gray-200"></div>
+                                      <div className="time flex space-x-2">
+                                        <p> 10 weeks ago</p>
+                                      </div>
+                                    </div>
+                                    <div className="danh-gia-middle text-left">
+                                      <p className="">{item.noiDung}</p>
+                                    </div>
+                                    <div className="ngay-danh-gia text-left">
+                                      <p className="text-gray-400 text-xs">
+                                        {item.ngayBinhLuan}
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="danh-gia-bot flex space-x-3 mx-4">
+                                  <span className="font-semibold">
+                                    Helpful?
+                                  </span>
+                                  <div className="like flex items-center space-x-1">
+                                    <i className="fa-regular fa-thumbs-up"></i>
+                                    <span>Yes</span>
+                                  </div>
+                                  <div className="dislike items-center space-x-1">
+                                    <i className="fa-regular fa-thumbs-down"></i>
+                                    <span>No</span>
+                                  </div>
+                                </div>
+                              </div>
+                            );
                           })}
                         </div>
                       </div>
@@ -380,6 +453,8 @@ const DetailPage = () => {
                           <button
                             className=" w-1/3 py-2   text-center font-bold bg-gray-200 hover:bg-gray-300 active"
                             onClick={(event) => {
+                              event.preventDefault;
+
                               switchTab(event, "basic");
                             }}
                           >
@@ -389,6 +464,8 @@ const DetailPage = () => {
                           <button
                             className="w-1/3 py-2 text-center    font-bold bg-gray-200 hover:bg-gray-300"
                             onClick={(event) => {
+                              event.preventDefault;
+
                               switchTab(event, "standard");
                             }}
                           >
@@ -397,6 +474,8 @@ const DetailPage = () => {
                           <button
                             className="w-1/3 py-2 text-center font-bold bg-gray-200 hover:bg-gray-300"
                             onClick={(event) => {
+                              event.preventDefault;
+
                               switchTab(event, "premium");
                             }}
                           >
@@ -404,18 +483,21 @@ const DetailPage = () => {
                           </button>
                         </div>
                         {/* Basic Package */}
-                        <div id="basic" className="p-5">
+                        <div id="basic" className="p-5 package-choose">
                           <PackageDetail item={item} />
                         </div>
                         {/* Standard Package */}
-                        <div id="standard" className="p-5 hidden">
+                        <div
+                          id="standard"
+                          className="p-5 hidden package-choose"
+                        >
                           <div className="text-2xl font-bold mb-2">US$50</div>
                           <p>Standard package details</p>
                           {/* Add content here */}
                           <ButtonPackage />
                         </div>
                         {/* Premium Package */}
-                        <div id="premium" className="p-5 hidden">
+                        <div id="premium" className="p-5 hidden package-choose">
                           <div className="text-2xl font-bold mb-2">US$100</div>
                           <p>Premium package details</p>
                           {/* Add content here */}

@@ -1,6 +1,6 @@
 export const switchTab = (event, packageType) => {
   const buttons = document.querySelectorAll("button");
-  const packages = document.querySelectorAll(".p-5");
+  const packages = document.querySelectorAll(".p-5.package-choose");
 
   buttons.forEach((btn) =>
     btn.classList.remove("bg-white", "border-b-2", "border-black", "active")
