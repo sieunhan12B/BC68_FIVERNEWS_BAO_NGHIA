@@ -20,10 +20,10 @@ const CreateUser = () => {
   });
   const [step, setStep] = useState(1);
   const [isActive, setIsActive] = useState(true);
-  const [uploadImage, setUploadImage] = useState(null)
-  const [errorImage, setErrorImage] = useState("")
+  const [uploadImage, setUploadImage] = useState(null);
+  const [errorImage, setErrorImage] = useState("");
 
-  const { user } = useSelector(state => state.authSlice)
+  const { user } = useSelector((state) => state.authSlice);
   const handleChangeValue = (event) => {
     const { name, value } = event.target; // email
     setUserValue({ ...userValue, [name]: value });
@@ -38,7 +38,7 @@ const CreateUser = () => {
         console.log(res);
         // đẩy người tạo tới trang upload hình ảnh để thêm hình vào
         // setStep(step + 1);
-        setIsActive(false)
+        setIsActive(false);
         // Sử dụng useContext để lấy phương thức thông báo thành công
       })
       .catch((err) => {
@@ -48,17 +48,20 @@ const CreateUser = () => {
   };
 
   const handleSubmitAvatar = (event) => {
-    event.preventDefault()
-    let formData = new FormData()
+    event.preventDefault();
+    let formData = new FormData();
     if (uploadImage) {
-      formData.append("formFile", uploadImage.image)
-      nguoiDungService.uploadAvatar(user.token, formData).then((res) => {
-        console.log(res)
-      }).catch((err) => {
-        console.log(err)
-      })
+      formData.append("formFile", uploadImage.image);
+      nguoiDungService
+        .uploadAvatar(user.token, formData)
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
-  }
+  };
 
   const renderLayoutForm = () => {
     switch (step) {
@@ -199,38 +202,48 @@ const CreateUser = () => {
           </form>
         );
       case 1:
-        return <div>
-          <form onSubmit={handleSubmitAvatar} className="space-y-2">
-            <h2>Upload hình ảnh cho người dùng</h2>
-            <div>
-              <label
-                htmlFor=""
-                className="block mb-2 text-sm font-medium text-gray-900 "
+        return (
+          <div>
+            <form onSubmit={handleSubmitAvatar} className="space-y-2">
+              <h2>Upload hình ảnh cho người dùng</h2>
+              <div>
+                <label
+                  htmlFor=""
+                  className="block mb-2 text-sm font-medium text-gray-900 "
+                >
+                  Ngày sinh
+                </label>
+                <input
+                  accept="image/png, image/jpeg"
+                  type="file"
+                  onChange={(event) => {
+                    console.log(event.target.files[0]);
+                    const image = event.target.files[0];
+                    if (image) {
+                      // kiểm tra dung lượng hình, nếu lớn hơn 10MB thì thông báo lỗi và không nhận hình ảnh
+                      if (image.size > 1 * 1024 * 1024) {
+                        setErrorImage("Hình vượt quá dung lượng cho phép");
+                        return;
+                      }
+                      const imageUrl = URL.createObjectURL(image);
+                      console.log(imageUrl);
+                      setUploadImage({ image, imageUrl });
+                      setErrorImage("");
+                    }
+                  }}
+                />
+              </div>
+              <p className="text-red-500">{errorImage}</p>
+              <img src={uploadImage?.imageUrl} alt="" className="w-32" />
+              <button
+                type="submit"
+                className="py-2 px-5 bg-green-600 text-white rounded-md"
               >
-                Ngày sinh
-              </label>
-              <input accept="image/png, image/jpeg" type="file" onChange={(event) => {
-                console.log(event.target.files[0])
-                const image = event.target.files[0]
-                if (image) {
-                  // kiểm tra dung lượng hình, nếu lớn hơn 10MB thì thông báo lỗi và không nhận hình ảnh
-                  if (image.size > 1 * 1024 * 1024) {
-                    setErrorImage("Hình vượt quá dung lượng cho phép")
-                    return
-                  }
-                  const imageUrl = URL.createObjectURL(image)
-                  console.log(imageUrl)
-                  setUploadImage({ image, imageUrl })
-                  setErrorImage("")
-                }
-              }}
-              />
-            </div>
-            <p className="text-red-500">{errorImage}</p>
-            <img src={uploadImage?.imageUrl} alt="" className="w-32" />
-            <button type="submit" className="py-2 px-5 bg-green-600 text-white rounded-md">Upload hình ảnh</button>
-          </form>
-        </div>;
+                Upload hình ảnh
+              </button>
+            </form>
+          </div>
+        );
     }
   };
 
@@ -264,8 +277,9 @@ const CreateUser = () => {
         onClick={() => {
           setStep(step + 1);
         }}
-        className={`py-2 px-5 bg-black text-white rounded mt-5 ${isActive ? "cursor-not-allowed bg-black/70" : ""
-          }`}
+        className={`py-2 px-5 bg-black text-white rounded mt-5 ${
+          isActive ? "cursor-not-allowed bg-black/70" : ""
+        }`}
       >
         Chuyển tới bước tiếp theo
       </button>

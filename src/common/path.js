@@ -4,4 +4,5 @@ export const pathDefault = {
   login: "/dang-nhap",
   listJob: "/list-job",
   admin: "/admin",
+  detailPage: "/cong-viec-chi-tiet",
 };
