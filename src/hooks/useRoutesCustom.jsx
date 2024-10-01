@@ -11,19 +11,28 @@ import AdminLogin from "../pages/AdminLogin/AdminLogin";
 import CreateUser from "../pages/CreateUser/CreateUser";
 import { Skeleton } from "antd";
 
-const ManagerUser = React.lazy(() => import("../pages/ManagerUser/ManagerUser"))
+import Home from "../pages/Home/Home";
+
+const ManagerUser = React.lazy(() =>
+  import("../pages/ManagerUser/ManagerUser")
+);
 
 const useRoutesCustom = () => {
   const routes = useRoutes([
     {
       path: pathDefault.homePage,
+
       element: <UserTemplate />,
       children: [
         {
           path: pathDefault.listJob,
-          element: <ListJobPage />
-        }
-      ]
+          element: <ListJobPage />,
+        },
+        {
+          path: pathDefault.listJob,
+          element: <Home />,
+        },
+      ],
     },
     {
       path: pathDefault.register,
@@ -45,17 +54,22 @@ const useRoutesCustom = () => {
         {
           path: "manager-user",
           // index: true,
-          element: <Suspense fallback={<Skeleton />}><ManagerUser /></Suspense>
+          element: (
+            <Suspense fallback={<Skeleton />}>
+              <ManagerUser />
+            </Suspense>
+          ),
         },
         {
-          path: 'create-user',
-          element: <CreateUser />
-        }
-      ]
-    }, {
-      path: '/admin-login',
-      element: <AdminLogin />
-    }
+          path: "create-user",
+          element: <CreateUser />,
+        },
+      ],
+    },
+    {
+      path: "/admin-login",
+      element: <AdminLogin />,
+    },
   ]);
   return routes;
 };
