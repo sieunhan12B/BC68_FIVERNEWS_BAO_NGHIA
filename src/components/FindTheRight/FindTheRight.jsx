@@ -1,10 +1,11 @@
+import { icons } from "antd/es/image/PreviewGroup";
 import React from "react";
 // import "./FreelanceService.css"; // Import your custom styles
 // import bg_1 from "../../assets/img/bg_1.png";
 //
 const FindTheRight = () => {
   return (
-    <div className=" container mx-24 relative bg-no-repeat bg-[url('/public/bg_1.png')] text-white h-screen flex flex-col justify-center items-center">
+    <div className="  container bg-no-repeat bg-[url('/public/bg_1.png')] text-white h-screen flex flex-col justify-center items-center">
       {/* Hero Headline */}
       <div className=" mb-10 text-center">
         <h1 className="text-4xl md:text-5xl font-bold">
@@ -56,23 +57,56 @@ const FindTheRight = () => {
       {/* Trusted by Brands */}
 
       {/* Categories Section */}
-      <div className=" flex flex-row max-w-7xl  gap-2">
+      <div className="  flex flex-wrap w-full  ">
         {[
-          "Programming & Tech",
-          "Graphics & Design",
-          "Digital Marketing",
-          "Writing & Translation",
-          "Video & Animation",
-          "AI Services",
-          "Music & Audio",
-          "Business",
-          "Consulting",
+          // "Programming & Tech",
+          // "Graphics & Design",
+          // "Digital Marketing",
+          // "Writing & Translation",
+          // "Video & Animation",
+          // "AI Services",
+          // "Music & Audio",
+          // "Business",
+          {
+            name: "Programming & Tech",
+            icons: "fa-brands fa-itch-io",
+          },
+          {
+            name: "Graphics & Design",
+            icons: "fa-brands fa-itunes-note",
+          },
+          {
+            name: "Digital Marketing",
+            icons: "fa-brands fa-itch-io",
+          },
+          {
+            name: "Writing & Translation",
+            icons: "fa-solid fa-person-walking-with-cane",
+          },
+          {
+            name: "Video & Animation",
+            icons: "fa-solid fa-circle-info",
+          },
+          {
+            name: "AI Services",
+            icons: "fa-solid fa-wheelchair",
+          },
+          {
+            name: "Music & Audio",
+            icons: "fa-solid fa-universal-access",
+          },
+          {
+            name: "Video & Animation",
+            icons: "fa-solid fa-circle-info",
+          },
+          // "Consulting",
         ].map((category) => (
           <div
             key={category}
-            className="p-2 bg-white text-gray-800 rounded-lg shadow-md"
+            className="md:max-lg:w-1/4 p-2  flex-wrap text-center bg-white text-gray-800 rounded-lg shadow-md"
           >
-            <p>{category}</p>
+            <i className={category.icons}></i>
+            <p>{category.name}</p>
           </div>
         ))}
       </div>

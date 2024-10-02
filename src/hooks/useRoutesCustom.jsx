@@ -11,6 +11,7 @@ import AdminLogin from "../pages/AdminLogin/AdminLogin";
 import CreateUser from "../pages/CreateUser/CreateUser";
 import { Skeleton } from "antd";
 import DetailPage from "../pages/DetailPage/DetailPage";
+import Home from "../pages/Home/Home";
 
 const ManagerUser = React.lazy(() =>
   import("../pages/ManagerUser/ManagerUser")
@@ -26,10 +27,13 @@ const useRoutesCustom = () => {
           path: pathDefault.listJob,
           element: <ListJobPage />,
         },
-
         {
           path: pathDefault.detailPage,
           element: <DetailPage />,
+        },
+        {
+          index: true,
+          element: <Home />,
         },
       ],
     },
