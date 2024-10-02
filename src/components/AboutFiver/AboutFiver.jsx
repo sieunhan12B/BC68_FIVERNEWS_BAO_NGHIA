@@ -1,7 +1,5 @@
 import React from "react";
 import video from "../../assets/img/video_55.mp4";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const AboutFiver = () => {
   return (

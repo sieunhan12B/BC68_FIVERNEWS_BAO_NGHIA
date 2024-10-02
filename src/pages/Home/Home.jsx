@@ -6,11 +6,13 @@ import AboutFiver from "../../components/AboutFiver/AboutFiver";
 import FiverrLogo from "../../components/FiverrLogo/FiverrLogo";
 import MadeOnFiverr from "../../components/MadeOnFiverr/MadeOnFiverr";
 import AWhole from "../../components/AWhole/AWhole";
+import CategorySection from "../../components/FindTheRight/CategorySection";
 
 const Home = () => {
   return (
     <>
       <FindTheRight />
+      <CategorySection />
       <Popular />
       <AWhole />
       <FiverrPro />
