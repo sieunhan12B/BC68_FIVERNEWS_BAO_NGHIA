@@ -113,7 +113,7 @@ const Header = () => {
                   </button>
                 </div>
                 <div className="flex flex-1 items-center justify-around sm:items-stretch  ">
-                  <div className="flex flex-shrink-0 items-center space-x-4  w-96">
+                  <div className="flex flex-shrink-0 items-center max-md:justify-end space-x-4   w-96">
                     <Link to={pathDefault.homePage}>
                       <IconLogoHeader />
                     </Link>
@@ -141,7 +141,7 @@ const Header = () => {
                       <button>English</button>
                       <a href="#">Become a Seller</a>
                     </div>
-                    <div>
+                    <div className="max-sm:hidden">
                       <LinkCustom
                         content={"Đăng nhập"}
                         to={pathDefault.login}
@@ -181,6 +181,18 @@ const Header = () => {
                   English
                 </button>
                 <a href="#">Become a Seller</a>
+                <div>
+                  <LinkCustom
+                    content={"Đăng nhập"}
+                    to={pathDefault.login}
+                    className={"border border-green-600 text-green-600"}
+                  />
+                  <LinkCustom
+                    content={"Đăng ký"}
+                    to={pathDefault.register}
+                    className={"bg-green-600 text-white"}
+                  />
+                </div>
               </div>
             </div>
           </nav>

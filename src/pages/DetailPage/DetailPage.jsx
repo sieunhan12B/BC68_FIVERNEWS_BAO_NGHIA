@@ -125,7 +125,7 @@ const DetailPage = () => {
               <BreadcrumbsDetail item={item} />
               <div className="detail-job">
                 <div className="container">
-                  <div className="detail-content  flex space-x-20 max-lg:flex-wrap ">
+                  <div className="detail-content  flex space-x-20 max-lg:space-x-0 max-lg:flex-wrap ">
                     {/* Cột bên trái  */}
                     <div className="max-lg:order-2 max-lg:w-full detail-content-left w-3/5 space-y-10">
                       {/*khái quát công việc */}

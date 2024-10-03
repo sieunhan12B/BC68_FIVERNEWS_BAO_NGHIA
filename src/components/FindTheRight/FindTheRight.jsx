@@ -6,6 +6,7 @@ import IconGoogle from "../Icon/IconGoogle";
 import IconPaypal from "../Icon/IconPaypal";
 import IconPayonner from "../Icon/IconPayonner";
 import IconPg from "../Icon/IconPg";
+import FormSearchProduct from "../FormSearchProduct/FormSearchProduct";
 // import "./FreelanceService.css"; // Import your custom styles
 // import bg_1 from "../../assets/img/bg_1.png";
 //
@@ -26,15 +27,20 @@ const FindTheRight = () => {
 
             {/* Search Bar */}
             <div className="w-full    ">
-              <div className="relative flex items-center">
-                <input
+              <div className="relative flex items-center ">
+                {/* <input
                   type="text"
                   placeholder="Search for any service..."
                   className="w-full px-4 py-3 rounded-full shadow focus:outline-none text-gray-800"
+                /> */}
+                <FormSearchProduct
+                  subClassName="text-black bg-white w-full"
+                  inputClassName="bg-transparent"
+                  widthCusTom="w-full"
                 />
-                <button className="absolute right-2 px-4 py-2 bg-green-600 text-white rounded-full">
+                {/* <button className="absolute right-2 px-4 py-2 bg-green-600 text-white rounded-full">
                   🔍
-                </button>
+                </button> */}
               </div>
             </div>
 
