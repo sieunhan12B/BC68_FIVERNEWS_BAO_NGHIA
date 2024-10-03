@@ -3,7 +3,7 @@ import React from "react";
 
 const aWhole = () => {
   return (
-    <div className="container">
+    <div className="container mx-auto">
       <h2 className=" text-5xl my-14">
         A Whole world of freelance <br /> talent at your fingertips
       </h2>

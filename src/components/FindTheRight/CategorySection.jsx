@@ -7,6 +7,7 @@ const CategorySection = () => {
         {/* Categories Section */}
         <div className="   flex flex-wrap w-full max-lg:gap-x-12  max-lg:gap-y-16      ">
           {/* md:max-lg:w-1/4 p-3 w-[calc(100%/9)] max-xl:w-[cal(100%/5)]  */}
+          {/* <div className="  flex flex-wrap w-full space-x-3 space-y-2  "> */}
           {[
             {
               name: "Program & Tech",
