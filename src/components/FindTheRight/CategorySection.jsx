@@ -2,13 +2,15 @@ import React from "react";
 
 const CategorySection = () => {
   return (
-    <div className="my-6">
+    <div className="mt-6 mb-24">
       <div className="container">
         {/* Categories Section */}
-        <div className="  flex flex-wrap w-full space-x-3 space-y-2  ">
+        <div className="   flex flex-wrap w-full max-lg:gap-x-12  max-lg:gap-y-16      ">
+          {/* md:max-lg:w-1/4 p-3 w-[calc(100%/9)] max-xl:w-[cal(100%/5)]  */}
+          {/* <div className="  flex flex-wrap w-full space-x-3 space-y-2  "> */}
           {[
             {
-              name: "Programming & Tech",
+              name: "Program & Tech",
               icons: "fa-brands fa-itch-io",
             },
             {
@@ -39,14 +41,24 @@ const CategorySection = () => {
               name: "Video & Animation",
               icons: "fa-solid fa-circle-info",
             },
+
             // "Consulting",
           ].map((category) => (
             <div
               key={category}
-              className="md:max-lg:w-1/4 p-3 w-[calc(100%/9)]    flex-wrap text-center bg-white text-gray-800 rounded-lg shadow-md"
+              className=" p-1 w-[calc(100%/8)] max-lg:w-1/5 max-lg:p-0    flex-wrap gap-5 max-lg:gap-16  bg-white text-gray-800 rounded-lg "
             >
-              <i className={category.icons}></i>
-              <p>{category.name}</p>
+              <div className="shadow-lg p-5 max-lg:p-0  w-full h-full  rounded-lg">
+                <div className="max-lg:w-full max-lg:h-full max-lg:flex max-lg:py-2 items-center justify-center">
+                  <i
+                    className={` max-lg:w-1/2 max-lg:h-1/2    ${category.icons}`}
+                  ></i>
+                </div>
+
+                <p className="max-lg:text-lg   font-semibold max-lg:text-center ">
+                  {category.name}
+                </p>
+              </div>
             </div>
           ))}
         </div>
