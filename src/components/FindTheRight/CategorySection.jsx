@@ -5,7 +5,7 @@ const CategorySection = () => {
     <div className="my-6">
       <div className="container">
         {/* Categories Section */}
-        <div className="  flex flex-wrap w-full space-x-5 space-y-3  ">
+        <div className="  flex flex-wrap w-full space-x-3 space-y-2  ">
           {[
             {
               name: "Programming & Tech",
