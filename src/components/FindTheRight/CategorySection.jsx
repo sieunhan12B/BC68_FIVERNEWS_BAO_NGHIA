@@ -5,7 +5,7 @@ const CategorySection = () => {
     <div className="mt-6 mb-24">
       <div className="container">
         {/* Categories Section */}
-        <div className="   flex flex-wrap w-full max-lg:gap-x-12  max-lg:gap-y-16      ">
+        <div className="   flex flex-wrap w-full max-lg:gap-x-12 max-md:gap-x-9  max-lg:gap-y-16      ">
           {/* md:max-lg:w-1/4 p-3 w-[calc(100%/9)] max-xl:w-[cal(100%/5)]  */}
           {/* <div className="  flex flex-wrap w-full space-x-3 space-y-2  "> */}
           {[
@@ -46,7 +46,7 @@ const CategorySection = () => {
           ].map((category) => (
             <div
               key={category}
-              className=" p-1 w-[calc(100%/8)] max-lg:w-1/5 max-lg:p-0    flex-wrap gap-5 max-lg:gap-16  bg-white text-gray-800 rounded-lg "
+              className=" p-1 w-[calc(100%/8)] max-sm:w-1/4 max-lg:w-1/5 max-lg:p-0    flex-wrap gap-5 max-lg:gap-16  bg-white text-gray-800 rounded-lg "
             >
               <div className="shadow-lg p-5 max-lg:p-0  w-full h-full  rounded-lg">
                 <div className="max-lg:w-full max-lg:h-full max-lg:flex max-lg:py-2 items-center justify-center">
