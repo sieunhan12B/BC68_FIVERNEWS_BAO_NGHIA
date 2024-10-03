@@ -10,7 +10,7 @@ import { Dropdown } from "antd";
 import { DownOutlined, SmileOutlined } from "@ant-design/icons";
 import useDebounce from "../../hooks/useDebounce";
 
-const FormSearchProduct = () => {
+const FormSearchProduct = ({ subClassName = "" }) => {
   const navigate = useNavigate();
   const [valueSearch, setValueSearch] = useState("");
   const [checkDropdown, setCheckDropdown] = useState(false);
@@ -78,7 +78,9 @@ const FormSearchProduct = () => {
           }}
           open={checkDropdown}
         >
-          <div className="pl-4 rounded-md border border-gray-400 flex items-center justify-between min-w-[400px]">
+          <div
+            className={`pl-4 rounded-md border border-gray-400 flex items-center justify-between min-w-[200px] ${subClassName}`}
+          >
             <input
               type="text"
               placeholder="Vui lòng nhập vào công việc cần kiếm"

@@ -56,47 +56,137 @@ const items = [
 
 const Header = () => {
   return (
-    <header className="py-5">
-      <div className="container">
-        <div className="header_content flex items-center justify-between">
-          <div className="header_logo flex items-center space-x-4">
-            <Link to={pathDefault.homePage}>
-              <IconLogoHeader />
-            </Link>
-            <FormSearchProduct />
-          </div>
-          <nav className="header_navigation space-x-5">
-            <Dropdown
-              menu={{
-                items,
-              }}
-              arrow={true}
-              trigger={["click"]}
-              className="cursor-pointer py-3 px-4 hover:bg-gray-100 duration-300 rounded-md"
-            >
-              <a onClick={(e) => e.preventDefault()}>
-                <Space>
-                  Hover me
-                  <DownOutlined />
-                </Space>
-              </a>
-            </Dropdown>
-            <button>English</button>
-            <a href="#">Become a Seller</a>
-            <LinkCustom
-              content={"Đăng nhập"}
-              to={pathDefault.login}
-              className={"border border-green-600 text-green-600"}
-            />
-            <LinkCustom
-              content={"Đăng ký"}
-              to={pathDefault.register}
-              className={"bg-green-600 text-white"}
-            />
+    <>
+      <header>
+        <div className="container">
+          <nav className="">
+            <div className="">
+              <div className="relative flex h-16 items-center justify-between ">
+                <div className="absolute inset-y-0 left-0 flex items-center xl:hidden ">
+                  {/* Mobile menu button*/}
+                  <button
+                    type="button"
+                    className="relative  inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                    aria-controls="mobile-menu"
+                    aria-expanded="false"
+                  >
+                    <span className="absolute -inset-0.5" />
+                    <span className="sr-only">Open main menu</span>
+                    {/*
+      Icon when menu is closed.
+
+      Menu open: "hidden", Menu closed: "block"
+    */}
+                    <svg
+                      className="block h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                      />
+                    </svg>
+                    {/*
+      Icon when menu is open.
+
+      Menu open: "block", Menu closed: "hidden"
+    */}
+                    <svg
+                      className="hidden h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div className="flex flex-1 items-center justify-around sm:items-stretch  ">
+                  <div className="flex flex-shrink-0 items-center space-x-4  w-96">
+                    <Link to={pathDefault.homePage}>
+                      <IconLogoHeader />
+                    </Link>
+                    <FormSearchProduct subClassName="lg:w-96" />
+                  </div>
+                  <div className="flex gap-10 items-center justify-center  sm:ml-6 ">
+                    <div className="max-xl:hidden  flex items-center space-x-6">
+                      {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
+                      <Dropdown
+                        menu={{
+                          items,
+                        }}
+                        arrow={true}
+                        trigger={["click"]}
+                        className="cursor-pointer py-3 px-4 hover:bg-gray-100 duration-300 rounded-md"
+                        aria-current="page"
+                      >
+                        <a onClick={(e) => e.preventDefault()}>
+                          <Space>
+                            Hover me
+                            <DownOutlined />
+                          </Space>
+                        </a>
+                      </Dropdown>
+                      <button>English</button>
+                      <a href="#">Become a Seller</a>
+                    </div>
+                    <div>
+                      <LinkCustom
+                        content={"Đăng nhập"}
+                        to={pathDefault.login}
+                        className={"border border-green-600 text-green-600"}
+                      />
+                      <LinkCustom
+                        content={"Đăng ký"}
+                        to={pathDefault.register}
+                        className={"bg-green-600 text-white"}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Mobile menu, show/hide based on menu state. */}
+            <div className="sm:hidden" id="mobile-menu">
+              <div className="space-y-1 px-2 pb-3 pt-2">
+                {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
+                <Dropdown
+                  menu={{
+                    items,
+                  }}
+                  arrow={true}
+                  trigger={["click"]}
+                  className="cursor-pointer py-3 px-4 hover:bg-gray-100 duration-300 r text-base font-medium text-gray-300  hover:text-white"
+                  aria-current="page"
+                >
+                  <a onClick={(e) => e.preventDefault()}>
+                    <Space>
+                      Hover me
+                      <DownOutlined />
+                    </Space>
+                  </a>
+                </Dropdown>
+                <button className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                  English
+                </button>
+                <a href="#">Become a Seller</a>
+              </div>
+            </div>
           </nav>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 };
 

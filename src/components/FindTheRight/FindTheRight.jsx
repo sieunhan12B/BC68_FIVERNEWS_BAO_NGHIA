@@ -1,18 +1,23 @@
 import { icons } from "antd/es/image/PreviewGroup";
 import React from "react";
 import CategorySection from "./CategorySection";
+import { Netflix } from "../Icon/Netflix";
+import IconGoogle from "../Icon/IconGoogle";
+import IconPaypal from "../Icon/IconPaypal";
+import IconPayonner from "../Icon/IconPayonner";
+import IconPg from "../Icon/IconPg";
 // import "./FreelanceService.css"; // Import your custom styles
 // import bg_1 from "../../assets/img/bg_1.png";
 //
 const FindTheRight = () => {
   return (
     <>
-      <div className="find-the-right h-[70vh]  ">
-        <div className="container h-full">
-          <div className=" bg-[url('/public/bg_1.png')] bg-no-repeat rounded-2xl py-12 flex items-center flex-wrap h-full space-y-8  text-white    justify-center ">
+      <div className="find-the-right       ">
+        <div className="container w-full h-96  bg-[url('/public/bg_1.png')] bg-no-repeat bg-cover rounded-2xl flex    justify-center  ">
+          <div className=" flex flex-col justify-end max-md:justify-center         gap-10  text-white      ">
             {/* Hero Headline */}
-            <div className="w-full h-1/3 text-center">
-              <h1 className="text-4xl md:text-5xl  font-bold">
+            <div className="w-full  text-center  ">
+              <h1 className="text-5xl    font-semibold">
                 Find the right <span className="text-green-400">freelance</span>{" "}
                 <br />
                 service, right away
@@ -20,7 +25,7 @@ const FindTheRight = () => {
             </div>
 
             {/* Search Bar */}
-            <div className="w-full h-2/3   max-w-md">
+            <div className="w-full    ">
               <div className="relative flex items-center">
                 <input
                   type="text"
@@ -31,30 +36,15 @@ const FindTheRight = () => {
                   🔍
                 </button>
               </div>
-              <div className="  text-gray-400 mt-2">
-                <p>Trusted by:</p>
-                <div className="flex justify-center space-x-4 mt-3">
-                  <img
-                    className="w-20"
-                    src="https://via.placeholder.com/50"
-                    alt="Meta"
-                  />
-                  <img
-                    className="w-20"
-                    src="https://via.placeholder.com/50"
-                    alt="Google"
-                  />
-                  <img
-                    className="w-20"
-                    src="https://via.placeholder.com/50"
-                    alt="Netflix"
-                  />
-                  <img
-                    className="w-20"
-                    src="https://via.placeholder.com/50"
-                    alt="PayPal"
-                  />
-                </div>
+            </div>
+
+            <div className="  flex max-md:hidden  items-center gap-12 mb-8   text-gray-400 ">
+              <p>Trusted by:</p>
+              <div className="flex justify-center  gap-12   mt-3">
+                <Netflix />
+                <IconGoogle />
+                <IconPayonner />
+                <IconPg />
               </div>
             </div>
 
