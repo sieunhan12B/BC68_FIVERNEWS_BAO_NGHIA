@@ -1,92 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { arrFooter } from "../../utils/arrFooter";
+import IconHome from "../Icon/IconHome";
+import IconLogoHeader from "../Icon/IconLogoHeader";
 
 const Footer = () => {
-  const arrFooter = [
-    {
-      name: "Categories",
-      subcategories: [
-        "Graphics & Design",
-        "Digital Marketing",
-        "Writing & Translation",
-        "Video & Animation",
-        "Music & Audio",
-        "Programming & Tech",
-        "Data",
-        "Business",
-        "Lifestyle",
-        "Sitemap",
-      ],
-    },
-    {
-      name: "About",
-      subabout: [
-        "Careers",
-        "Press & News",
-        "Partnerships",
-        "Privacy Policy",
-        "Terms of Service",
-        "Intellectual Property Claims",
-        "Investor Relations",
-      ],
-    },
-    {
-      name: "Support",
-      subcsupport: [
-        "Help & Support",
-        "Trust & Safety",
-        "Selling on Fiverr",
-        "Buying on Fiverr",
-      ],
-    },
-    {
-      name: "Community",
-      subcommunity: [
-        "Events",
-        "Blog",
-        "Forum",
-        "Community Standards",
-        "Podcast",
-        "Affiliates",
-        "Invite a Friend",
-        "Become a Seller",
-        "Fiverr Elevate Exclusive Benefits",
-      ],
-    },
-    {
-      name: "More From Fiverr",
-      submorefromfiverr: [
-        "Fiverr Business",
-        "Fiverr Pro",
-        "Fiverr Studios",
-        "Fiverr Logo Maker",
-        "Fiverr Guides",
-        "Get Inspired",
-        "ClearVoice Content Marketing",
-        "AND CO Invoice Software",
-        "Learn Online Courses",
-      ],
-    },
-  ];
-  console.log(arrFooter);
+  // console.log(arr);
   return (
-    <footer className="bg-white dark:bg-gray-900 mt-20">
-      <div className="mx-auto w-full max-w-screen-xl">
-        <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
+    <footer className="bg-white  mt-20">
+      <div className="mx-auto border-t w-full max-w-screen-xl">
+        <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-5 ">
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            <h2 className="mb-6 text-sm font-bold text-black  uppercase ">
               Company
             </h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
-              {arrFooter[0].subcategories.map((item, index) => {
+            <ul className="text-gray-500  font-medium space-y-3">
+              {arrFooter[0].links.map((item, index) => {
+                return (
+                  <li>
+                    <Link className="hover:underline" to={"./"}>
+                      {" "}
+                      {item}
+                    </Link>
+                  </li>
+                );
                 console.log(item);
-                <li className="mb-4">
-                  <Link to={"./"}>{item} </Link>
-                </li>;
               })}
             </ul>
 
-            {/* <ul className="text-gray-500 dark:text-gray-400 font-medium">
+            {/* <ul className="text-gray-500  font-medium space-y-3">
               <li className="mb-4">
                 <a href="#" className=" hover:underline">
                   About
@@ -110,86 +52,84 @@ const Footer = () => {
             </ul> */}
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-              Help center
+            <h2 className="mb-6 text-sm font-bold text-black  uppercase ">
+              For client
             </h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Discord Server
-                </a>
-              </li>
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Twitter
-                </a>
-              </li>
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Facebook
-                </a>
-              </li>
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Contact Us
-                </a>
-              </li>
+            <ul className="text-gray-500  font-medium space-y-3">
+              {arrFooter[1].links.map((item, index) => {
+                return (
+                  <li className="">
+                    <Link className="hover:underline" to={"./"}>
+                      {" "}
+                      {item}
+                    </Link>
+                  </li>
+                );
+                console.log(item);
+              })}
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-              Legal
+            <h2 className="mb-6 text-sm font-bold text-black  uppercase ">
+              For Freelancers
             </h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Privacy Policy
-                </a>
-              </li>
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Licensing
-                </a>
-              </li>
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Terms &amp; Conditions
-                </a>
-              </li>
+            <ul className="text-gray-500  font-medium space-y-3">
+              {arrFooter[2].links.map((item, index) => {
+                return (
+                  <li>
+                    <Link className="hover:underline" to={"./"}>
+                      {" "}
+                      {item}
+                    </Link>
+                  </li>
+                );
+                console.log(item);
+              })}
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-              Download
+            <h2 className="mb-6 text-sm font-bold text-black  uppercase ">
+              Business Solutions
             </h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  iOS
-                </a>
-              </li>
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Android
-                </a>
-              </li>
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  Windows
-                </a>
-              </li>
-              <li className="mb-4">
-                <a href="#" className="hover:underline">
-                  MacOS
-                </a>
-              </li>
+            <ul className="text-gray-500  font-medium space-y-3">
+              {arrFooter[3].links.map((item, index) => {
+                return (
+                  <li>
+                    <Link className="hover:underline" to={"./"}>
+                      {" "}
+                      {item}
+                    </Link>
+                  </li>
+                );
+                console.log(item);
+              })}
+            </ul>
+          </div>
+          <div>
+            <h2 className="mb-6 text-sm font-bold text-black  uppercase ">
+              Company
+            </h2>
+            <ul className="text-gray-500  font-medium space-y-3">
+              {arrFooter[4].links.map((item, index) => {
+                return (
+                  <li>
+                    <Link className="hover:underline" to={"./"}>
+                      {" "}
+                      {item}
+                    </Link>
+                  </li>
+                );
+                console.log(item);
+              })}
             </ul>
           </div>
         </div>
-        <div className="px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
-          <span className="text-sm text-gray-500 dark:text-gray-300 sm:text-center">
-            © 2023 <a href="https://flowbite.com/">Flowbite™</a>. All Rights
-            Reserved.
+        <div className="px-4 py-6 border-t md:flex md:items-center md:justify-between">
+          <span className="text-sm text-gray-500 flex items-center gap-3   sm:text-center">
+            <Link className="" to={"./"}>
+              <IconLogoHeader />
+            </Link>
+            <p className="mt-1">© Fiverr International Ltd. 2024</p>
           </span>
           <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
             <a

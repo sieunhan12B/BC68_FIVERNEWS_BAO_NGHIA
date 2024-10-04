@@ -65,6 +65,17 @@ const Header = () => {
                 <div className="absolute inset-y-0 left-0 flex items-center xl:hidden ">
                   {/* Mobile menu button*/}
                   <button
+                    onClick={() => {
+                      let element =
+                        document.getElementById("mobile-menu").classList;
+                      if (element.contains("hidden")) {
+                        element.add("block");
+                        element.remove("hidden");
+                      } else {
+                        element.add("hidden");
+                        element.remove("block");
+                      }
+                    }}
                     type="button"
                     className="relative  inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                     aria-controls="mobile-menu"
@@ -158,7 +169,7 @@ const Header = () => {
               </div>
             </div>
             {/* Mobile menu, show/hide based on menu state. */}
-            <div className="sm:hidden" id="mobile-menu">
+            <div className="hidden" id="mobile-menu">
               <div className="space-y-1 px-2 pb-3 pt-2">
                 {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                 <Dropdown
@@ -167,7 +178,7 @@ const Header = () => {
                   }}
                   arrow={true}
                   trigger={["click"]}
-                  className="cursor-pointer py-3 px-4 hover:bg-gray-100 duration-300 r text-base font-medium text-gray-300  hover:text-white"
+                  className="cursor-pointer py-3 px-3 hover:bg-gray-100 duration-300 r text-base font-medium "
                   aria-current="page"
                 >
                   <a onClick={(e) => e.preventDefault()}>
@@ -177,20 +188,29 @@ const Header = () => {
                     </Space>
                   </a>
                 </Dropdown>
-                <button className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+                <button className="block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-100  ">
                   English
                 </button>
-                <a href="#">Become a Seller</a>
+                <Link
+                  className="block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-100"
+                  href="#"
+                >
+                  Become a Seller
+                </Link>
                 <div>
                   <LinkCustom
                     content={"Đăng nhập"}
                     to={pathDefault.login}
-                    className={"border border-green-600 text-green-600"}
+                    className={
+                      "border border-green-600 text-green-600 block w-1/6 rounded-md px-3 py-2 text-base font-medium hover:bg-green-600 mb-2 hover:text-white "
+                    }
                   />
                   <LinkCustom
                     content={"Đăng ký"}
                     to={pathDefault.register}
-                    className={"bg-green-600 text-white"}
+                    className={
+                      "bg-green-600 text-white block rounded-md px-3 py-2 text-base font-medium hover:bg-white border hover:border-green-600 w-1/6 hover:text-green-600"
+                    }
                   />
                 </div>
               </div>
