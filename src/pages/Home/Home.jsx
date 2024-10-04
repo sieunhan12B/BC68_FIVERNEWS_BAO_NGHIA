@@ -7,6 +7,7 @@ import FiverrLogo from "../../components/FiverrLogo/FiverrLogo";
 import MadeOnFiverr from "../../components/MadeOnFiverr/MadeOnFiverr";
 import AWhole from "../../components/AWhole/AWhole";
 import CategorySection from "../../components/FindTheRight/CategorySection";
+import Guides from "../../components/Guides/Guides";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <AboutFiver />/
       <FiverrLogo />
       <MadeOnFiverr />
+      <Guides />
     </>
   );
 };
